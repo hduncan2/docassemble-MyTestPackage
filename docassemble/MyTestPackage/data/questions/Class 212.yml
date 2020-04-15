@@ -1,0 +1,50 @@
+---
+mandatory: True
+code: |
+  if user_likes_parties:
+    if user_has_a_ride:
+     if user_likes_to_drink: 
+       go_to_party
+  dont_go_to_party  
+---
+question: |
+  Do you like parties?
+fields:
+  - no label: user_likes_parties
+    datatype: yesnoradio
+---
+question: |
+  Do you have a ride?
+fields:
+  - no label: user_has_a_ride
+    datatype: yesnoradio
+---
+question: |
+  Do you like to drink?
+fields: 
+  - no label: user_likes_to_drink
+    datatype: yesnoradio
+---
+question: |
+ Do you like to dance?
+fields:
+  - no label: user_likes_to_dance
+    datatype: yesnoradio
+---
+question: |
+  Do you know where the party is?
+fields:
+  - no label: user_knows_where_party_is
+    datatype: yesnoradio
+--- 
+event: dont_go_to_party
+question: |
+  Don't go to that dumb party. Do something fun instead!
+subquestion: |
+  [FILE https://media.giphy.com/media/3j7lxEPPFseD0xvhPi/giphy.gif]
+---
+event: go_to_party
+question: |
+  You should go to the party! I promise it'll be awesome!
+subquestion: |
+  [FILE https://media.giphy.com/media/l0MYt5jPR6QX5pnqM/giphy.gif]
